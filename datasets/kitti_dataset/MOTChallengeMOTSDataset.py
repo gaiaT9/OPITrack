@@ -39,17 +39,17 @@ class MOTSTrackPersonValOffset(Dataset):
             ids = SEQ_IDS_VAL
             timestamps = TIMESTEPS_PER_SEQ
             self.image_root = os.path.join(MOTSROOT, 'train')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/motchallenge_pred')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/motchallenge_pred')
         elif type in 'training':
             ids = SEQ_IDS_TRAIN
             timestamps = TIMESTEPS_PER_SEQ
             self.image_root = os.path.join(MOTSROOT, 'train')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/motchallenge_pred')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/motchallenge_pred')
         elif type in 'testing':
             ids = SEQ_IDS_TEST
             timestamps = TIMESTEPS_PER_SEQ_TEST
             self.image_root = os.path.join(MOTSROOT, 'test')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/motchallenge_pred_test')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/motchallenge_pred_test')
         else:
             raise ValueError('Unknown type: %s' % type)
 

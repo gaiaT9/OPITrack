@@ -44,17 +44,17 @@ class MOTSTrackCarsValOffset(Dataset):
             ids = self.SEQ_IDS_VAL
             timestamps = self.TIMESTEPS_PER_SEQ
             self.image_root = os.path.join(kittiRoot, 'images')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/car_SE_val_prediction')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/car_SE_val_prediction')
         elif type in 'training':
             ids = self.SEQ_IDS_TRAIN
             timestamps = self.TIMESTEPS_PER_SEQ
             self.image_root = os.path.join(kittiRoot, 'images')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/car_SE_train_prediction')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/car_SE_train_prediction')
         elif type in 'testing':
             ids = self.SEQ_IDS_TEST
             timestamps = self.TIMESTEPS_PER_SEQ_TEST
             self.image_root = os.path.join(kittiRoot, 'testing/image_02/')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/car_SE_test_prediction')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/car_SE_test_prediction')
         else:
             raise ValueError('Unknown type: %s' % type)
 
@@ -209,17 +209,17 @@ class MOTSTrackPersonValOffset(Dataset):
             ids = self.SEQ_IDS_VAL
             timestamps = self.TIMESTEPS_PER_SEQ
             self.image_root = os.path.join(kittiRoot, 'images')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/person_SE_val_prediction')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/person_SE_val_prediction')
         elif type in 'training':
             ids = self.SEQ_IDS_TRAIN
             timestamps = self.TIMESTEPS_PER_SEQ
             self.image_root = os.path.join(kittiRoot, 'images')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/person_SE_train_prediction')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/person_SE_train_prediction')
         elif type in 'testing':
             ids = self.SEQ_IDS_TEST
             timestamps = self.TIMESTEPS_PER_SEQ_TEST
             self.image_root = os.path.join(kittiRoot, 'testing/image_02/')
-            self.mots_root = os.path.join(systemRoot, 'PointTrack/person_SE_test_prediction')
+            self.mots_root = os.path.join(systemRoot, 'OPITrack/person_SE_test_prediction')
         else:
             raise ValueError('Unknown type: %s' % type)
 

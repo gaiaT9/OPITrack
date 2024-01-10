@@ -183,6 +183,7 @@ def val(epoch):
     save_val_dir = val_args['save_dir'].split('/')[1]
 
     val_args['run_eval'] = False
+    val_args['checkpoint_path'] = file_name
     validate_mots(val_args, verbose=False, no_cache=True, specific_checkpoints_name=file_name)
     # p = subprocess.run([pythonPath, "-u", "eval.py",
     #                     os.path.join(rootDir, save_val_dir), kittiRoot + "/instances", "val.seqmap"],
@@ -205,16 +206,16 @@ def val(epoch):
     p = subprocess.run([pythonPath, "-u", os.path.join(rootDir, 'datasets', 'TrackEval', 'scripts', 'run_kitti_mots.py'),
                         '--GT_FOLDER', os.path.join(kittiRoot, 'training'), '--TRACKERS_FOLDER', '..', '--SEQMAP_FILE',
                         os.path.join(rootDir, 'datasets', 'mots_tools', 'mots_eval', 'val.seqmap'), '--TRACKER_SUB_FOLDER',
-                        save_val_dir, '--TRACKERS_TO_EVAL', 'PointTrack'],
+                        save_val_dir, '--TRACKERS_TO_EVAL', 'OPITrack'],
                        stdout=subprocess.PIPE, cwd=rootDir)
     hotaout = p.stdout.decode("utf-8")
 
     if 'person' in args['save_dir']:
         class_str = "Evaluate class: Pedestrians"
-        hota_str = 'PointTrack-pedestrian'
+        hota_str = 'OPITrack-pedestrian'
     else:
         class_str = "Evaluate class: Cars"
-        hota_str = 'PointTrack-car'
+        hota_str = 'OPITrack-car'
     # parse raw CLEAR metric
     pout = pout[pout.find(class_str):]
     # print result

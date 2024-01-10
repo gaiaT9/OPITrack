@@ -22,3 +22,6 @@ build/
 # data
 data/
 exps/
+car_SE_val_prediction/
+person_SE_val_prediction/
+features/
