@@ -1,0 +1,24 @@
+# BEGIN: /dev/shm/OPITrack/.gitignore
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pyi
+*.pyz
+*.pyw
+*.pyz/
+*.pyw/
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+# END: /dev/shm/OPITrack/.gitignore
+
+# vscode
+.vscode/
+
+# data
+data/
+exps/
