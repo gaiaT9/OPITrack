@@ -1,0 +1,20 @@
+from .KittiMOTSDataset import *
+from .instance_seg_dataset import *
+from .KittiMOTSDataset_test import MOTSTrackCarsTrain as MOTSTrackCarsTrainSeq
+from .KittiMOTSDataset_dhn import MOTSTrackCarsTrain as MOTSTrackCarsTrainSeqDHN
+from .KittiMOTSDataset_strip import MOTSTrackCarsTrain as MOTSTrackCarsTrainStrip
+from .KittiMOTSDataset_strip import MOTSTrackCarsValOffset as MOTSTrackCarsValOffsetStrip
+from .KittiMOTSDataset_dist import MOTSTrackCarsTrain as MOTSTrackCarsTrainTID
+from .KittiMOTSDataset_weight import MOTSTrackCarsTrain as MOTSTrackCarsTrainWeight
+# from .KittiMOTSDataset_with_img import *
+# person
+from .KittiMOTSDataset_test import MOTSTrackPersonTrain as MOTSTrackPersonTrainSeq
+from .KittiMOTSDataset_weight import MOTSTrackPersonTrain as MOTSTrackPersonTrainWeight
+# motchallenge
+from .MOTChallengeMOTSDataset import MOTSTrackPersonTrain as MOTSChallengeTrackPersonTrain
+from .MOTChallengeMOTSDataset import MOTSTrackPersonValOffset as MOTSChallengeTrackPersonVal
+from .MOTChallengeMOTSDataset_test import MOTSTrackPersonTrain as MOTSChallengeTrackPersonTrainSeq
+from .MOTChallengeMOTSDataset_weight import MOTSTrackPersonTrain as MOTSChallengeTrackPersonTrainWeight
+# vis dataset
+from .KittiMOTSDataset_vis import MOTSTrackCarsValOffset as MOTSTrackCarsValOffsetVis
+from .KittiMOTSDataset_vis import MOTSTrackPersonValOffset as MOTSTrackPersonValOffsetVis
