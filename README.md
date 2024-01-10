@@ -43,6 +43,8 @@ kittiRoot
 │   │   │    ... 
 ```
 
+Or download the file at [GoogleDrive](https://drive.google.com/drive/folders/1pDIjXuXMdPVTPjJtEF4pK3iVerq1VvIn) and unzip to project root directory.
+
 ## Training of OPITrack
 The training procedure of instance association is as follows.
 
